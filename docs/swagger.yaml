@@ -1,0 +1,799 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: Twidder
+  contact: {}
+host: localhost:8080
+basePath: /
+securityDefinitions: {}
+schemes:
+  - http
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /auth/signup:
+    post:
+      summary: Create User budi
+      tags:
+        - Auth
+      operationId: CreateUserbudi
+      deprecated: false
+      produces:
+        - application/json; charset=utf-8
+      consumes:
+        - application/json
+      parameters:
+        - name: Content-Type
+          in: header
+          required: false
+          enum:
+            - application/json
+          type: string
+          description: ''
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/CreateUserbudiRequest'
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/IvanLanin'
+          examples:
+            application/json; charset=utf-8:
+              payload:
+                ID: 2
+                Username: ivanlanin
+                DisplayName: Ivan Lanin
+                Email: ivanlanin@gmail.com
+                CreatedAt: '2021-05-11T10:45:10.087+07:00'
+                UpdatedAt: '2021-05-11T10:45:10.087+07:00'
+                DeletedAt: null
+          headers:
+            Date:
+              type: string
+              default: Tue, 11 May 2021 03:45:10 GMT
+            Content-Length:
+              type: string
+              default: '205'
+  /auth/login:
+    post:
+      summary: Login budi
+      tags:
+        - Auth
+      operationId: Loginbudi
+      deprecated: false
+      produces:
+        - application/json; charset=utf-8
+      consumes:
+        - application/json
+      parameters:
+        - name: Content-Type
+          in: header
+          required: false
+          enum:
+            - application/json
+          type: string
+          description: ''
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/LoginbudiRequest'
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/LoginIvanLanin'
+          examples:
+            application/json; charset=utf-8:
+              code: 200
+              expire: '2021-05-11T11:20:39+07:00'
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjA3MDY4MzksImlkIjoxLCJvcmlnX2lhdCI6MTYyMDcwMzIzOX0.7j7ymB8HyhOMA933Xz2AEWXKDPNB5ovdASUVKm6roLQ
+          headers:
+            Set-Cookie:
+              type: string
+              default: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjA3MDY4MzksImlkIjoxLCJvcmlnX2lhdCI6MTYyMDcwMzIzOX0.7j7ymB8HyhOMA933Xz2AEWXKDPNB5ovdASUVKm6roLQ; Path=/; Max-Age=3600; HttpOnly
+            Date:
+              type: string
+              default: Tue, 11 May 2021 03:20:39 GMT
+            Content-Length:
+              type: string
+              default: '204'
+  /auth/logout:
+    post:
+      summary: Logout
+      tags:
+        - Auth
+      operationId: Logout
+      deprecated: false
+      produces:
+        - application/json
+      consumes:
+        - application/json
+      parameters:
+        - name: Content-Type
+          in: header
+          required: false
+          enum:
+            - application/json
+          type: string
+          description: ''
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/LogoutRequest'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /auth/current-user:
+    get:
+      summary: Current User
+      tags:
+        - Auth
+      operationId: CurrentUser
+      deprecated: false
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      security: []
+  /auth/deactivate-account:
+    delete:
+      summary: Deactivate Account
+      tags:
+        - Auth
+      operationId: DeactivateAccount
+      deprecated: false
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /auth/reactivate-account:
+    post:
+      summary: Reactivate Account
+      tags:
+        - Auth
+      operationId: ReactivateAccount
+      deprecated: false
+      produces:
+        - application/json; charset=utf-8
+      consumes:
+        - application/json
+      parameters:
+        - name: Content-Type
+          in: header
+          required: false
+          enum:
+            - application/json
+          type: string
+          description: ''
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/ReactivateAccountRequest'
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/LoginIhza'
+          examples:
+            application/json; charset=utf-8:
+              code: 200
+              expire: '2021-05-11T11:20:39+07:00'
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjA3MDY4MzksImlkIjoxLCJvcmlnX2lhdCI6MTYyMDcwMzIzOX0.7j7ymB8HyhOMA933Xz2AEWXKDPNB5ovdASUVKm6roLQ
+          headers:
+            Set-Cookie:
+              type: string
+              default: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjA3MDY4MzksImlkIjoxLCJvcmlnX2lhdCI6MTYyMDcwMzIzOX0.7j7ymB8HyhOMA933Xz2AEWXKDPNB5ovdASUVKm6roLQ; Path=/; Max-Age=3600; HttpOnly
+            Date:
+              type: string
+              default: Tue, 11 May 2021 03:20:39 GMT
+            Content-Length:
+              type: string
+              default: '204'
+  /users:
+    get:
+      summary: Get All Users
+      tags:
+        - User
+      operationId: GetAllUsers
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: page
+          in: query
+          required: true
+          type: integer
+          format: int32
+          description: ''
+        - name: page_size
+          in: query
+          required: true
+          type: integer
+          format: int32
+          description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /users/1:
+    get:
+      summary: Get User By Id
+      tags:
+        - User
+      operationId: GetUserById
+      deprecated: false
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /users/1/tweets:
+    get:
+      summary: Get User's Tweets
+      tags:
+        - User
+      operationId: GetUser'sTweets
+      deprecated: false
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /tweets:
+    get:
+      summary: Get All Tweets
+      tags:
+        - Tweet
+      operationId: GetAllTweets
+      deprecated: false
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    post:
+      summary: Create Tweet
+      tags:
+        - Tweet
+      operationId: CreateTweet
+      deprecated: false
+      produces:
+        - application/json
+      consumes:
+        - application/json
+      parameters:
+        - name: Content-Type
+          in: header
+          required: false
+          enum:
+            - application/json
+          type: string
+          description: ''
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/CreateTweetRequest'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      security: []
+  /tweets/4:
+    get:
+      summary: Get Tweet By ID
+      tags:
+        - Tweet
+      operationId: GetTweetByID
+      deprecated: false
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /tweets/1:
+    delete:
+      summary: Delete Tweet By ID
+      tags:
+        - Tweet
+      operationId: DeleteTweetByID
+      deprecated: false
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /tweets/timeline:
+    get:
+      summary: Timeline
+      tags:
+        - Tweet
+      operationId: Timeline
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: page
+          in: query
+          required: true
+          type: integer
+          format: int32
+          description: ''
+        - name: page_size
+          in: query
+          required: true
+          type: integer
+          format: int32
+          description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /users/1/follow:
+    post:
+      summary: Follow
+      tags:
+        - Follow
+      operationId: Follow
+      deprecated: false
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /users/1/unfollow:
+    post:
+      summary: Unfollow
+      tags:
+        - Follow
+      operationId: Unfollow
+      deprecated: false
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /users/2/followers:
+    get:
+      summary: Get User's Followers
+      tags:
+        - Follow
+      operationId: GetUser'sFollowers
+      deprecated: false
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /users/1/followings:
+    get:
+      summary: Get User's Folowings
+      tags:
+        - Follow
+      operationId: GetUser'sFolowings
+      deprecated: false
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /tweets/1/like:
+    post:
+      summary: Like
+      tags:
+        - Like
+      operationId: Like
+      deprecated: false
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /tweets/5/unlike:
+    post:
+      summary: Unlike
+      tags:
+        - Like
+      operationId: Unlike
+      deprecated: false
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /tweets/5/likes:
+    get:
+      summary: Likes
+      tags:
+        - Like
+      operationId: Likes
+      deprecated: false
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /tweets/1/reply:
+    post:
+      summary: Reply
+      tags:
+        - Reply
+      operationId: Reply
+      deprecated: false
+      produces:
+        - application/json
+      consumes:
+        - application/json
+      parameters:
+        - name: Content-Type
+          in: header
+          required: false
+          enum:
+            - application/json
+          type: string
+          description: ''
+        - name: Body
+          in: body
+          required: true
+          description: ''
+          schema:
+            $ref: '#/definitions/ReplyRequest'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /tweets/3/replies:
+    get:
+      summary: Replies
+      tags:
+        - Reply
+      operationId: Replies
+      deprecated: false
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /notifications:
+    get:
+      summary: Get Notifications
+      tags:
+        - Notification
+      operationId: GetNotifications
+      deprecated: false
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /ping:
+    get:
+      summary: Ping
+      tags:
+        - Misc
+      operationId: Ping
+      deprecated: false
+      produces:
+        - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+definitions:
+  CreateUserbudiRequest:
+    title: CreateUserbudiRequest
+    example:
+      email: budi@yahoo.com
+      userName: budi
+      password: ArifBudiman123
+      displayName: Arif Budiman
+    type: object
+    properties:
+      email:
+        type: string
+      userName:
+        type: string
+      password:
+        type: string
+      displayName:
+        type: string
+    required:
+      - email
+      - userName
+      - password
+      - displayName
+  IvanLanin:
+    title: IvanLanin
+    example:
+      payload:
+        ID: 2
+        Username: ivanlanin
+        DisplayName: Ivan Lanin
+        Email: ivanlanin@gmail.com
+        CreatedAt: '2021-05-11T10:45:10.087+07:00'
+        UpdatedAt: '2021-05-11T10:45:10.087+07:00'
+        DeletedAt: null
+    type: object
+    properties:
+      payload:
+        $ref: '#/definitions/Payload'
+    required:
+      - payload
+  Payload:
+    title: Payload
+    example:
+      ID: 2
+      Username: ivanlanin
+      DisplayName: Ivan Lanin
+      Email: ivanlanin@gmail.com
+      CreatedAt: '2021-05-11T10:45:10.087+07:00'
+      UpdatedAt: '2021-05-11T10:45:10.087+07:00'
+      DeletedAt: null
+    type: object
+    properties:
+      ID:
+        type: integer
+        format: int32
+      Username:
+        type: string
+      DisplayName:
+        type: string
+      Email:
+        type: string
+      CreatedAt:
+        type: string
+      UpdatedAt:
+        type: string
+      DeletedAt:
+        type: string
+    required:
+      - ID
+      - Username
+      - DisplayName
+      - Email
+      - CreatedAt
+      - UpdatedAt
+      - DeletedAt
+  Ihza:
+    title: Ihza
+    example:
+      user:
+        ID: 1
+        Username: ihza
+        DisplayName: ihza pramudya
+        Email: ihzapramudya@gmail.com
+        CreatedAt: '2021-05-11T15:00:55.964+07:00'
+        UpdatedAt: '2021-05-11T15:00:55.964+07:00'
+    type: object
+    properties:
+      user:
+        $ref: '#/definitions/User'
+    required:
+      - user
+  User:
+    title: User
+    example:
+      ID: 1
+      Username: Ihzam31415
+      DisplayName: Ihza Muhammad
+      Email: Ihzamuhammad1100@gmail.com
+      CreatedAt: '2021-05-11T15:00:55.964+07:00'
+      UpdatedAt: '2021-05-11T15:00:55.964+07:00'
+    type: object
+    properties:
+      ID:
+        type: integer
+        format: int32
+      Username:
+        type: string
+      DisplayName:
+        type: string
+      Email:
+        type: string
+      CreatedAt:
+        type: string
+      UpdatedAt:
+        type: string
+    required:
+      - ID
+      - Username
+      - DisplayName
+      - Email
+      - CreatedAt
+      - UpdatedAt
+  CreateUserivanlaninRequest:
+    title: CreateUserivanlaninRequest
+    example:
+      email: ivanlanin@gmail.com
+      userName: ivanlanin
+      password: IvanLaninKeren123
+      displayName: Ivan Lanin
+    type: object
+    properties:
+      email:
+        type: string
+      userName:
+        type: string
+      password:
+        type: string
+      displayName:
+        type: string
+    required:
+      - email
+      - userName
+      - password
+      - displayName
+  LoginbudiRequest:
+    title: LoginbudiRequest
+    example:
+      username: budi
+      password: ArifBudiman123
+    type: object
+    properties:
+      username:
+        type: string
+      password:
+        type: string
+    required:
+      - username
+      - password
+  LoginIvanLanin:
+    title: LoginIvanLanin
+    example:
+      code: 200
+      expire: '2021-05-11T11:20:39+07:00'
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjA3MDY4MzksImlkIjoxLCJvcmlnX2lhdCI6MTYyMDcwMzIzOX0.7j7ymB8HyhOMA933Xz2AEWXKDPNB5ovdASUVKm6roLQ
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      expire:
+        type: string
+      token:
+        type: string
+    required:
+      - code
+      - expire
+      - token
+  LoginIhza:
+    title: LoginIhza
+    example:
+      code: 200
+      expire: '2021-05-11T11:20:39+07:00'
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjA3MDY4MzksImlkIjoxLCJvcmlnX2lhdCI6MTYyMDcwMzIzOX0.7j7ymB8HyhOMA933Xz2AEWXKDPNB5ovdASUVKm6roLQ
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      expire:
+        type: string
+      token:
+        type: string
+    required:
+      - code
+      - expire
+      - token
+  LoginivanlaninRequest:
+    title: LoginivanlaninRequest
+    example:
+      userName: ivanlanin
+      password: IvanLaninKeren123
+    type: object
+    properties:
+      userName:
+        type: string
+      password:
+        type: string
+    required:
+      - userName
+      - password
+  LogoutRequest:
+    title: LogoutRequest
+    example:
+      username: Ihzam31415
+      password: IhzaKeren99
+    type: object
+    properties:
+      username:
+        type: string
+      password:
+        type: string
+    required:
+      - username
+      - password
+  ReactivateAccountRequest:
+    title: ReactivateAccountRequest
+    example:
+      username: ivanlanin
+      password: IvanLaninKeren123
+    type: object
+    properties:
+      username:
+        type: string
+      password:
+        type: string
+    required:
+      - username
+      - password
+  CreateTweetRequest:
+    title: CreateTweetRequest
+    example:
+      text: Halo semua saya Budi
+    type: object
+    properties:
+      text:
+        type: string
+    required:
+      - text
+  ReplyRequest:
+    title: ReplyRequest
+    example:
+      text: Halo Budi!
+    type: object
+    properties:
+      text:
+        type: string
+    required:
+      - text
+tags:
+  - name: Auth
+  - name: User
+  - name: Tweet
+  - name: Follow
+  - name: Like
+  - name: Reply
+  - name: Notification
+  - name: Misc
+    description: ''

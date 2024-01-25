@@ -1,0 +1,1248 @@
+{
+	"info": {
+		"_postman_id": "5cf385ab-6495-4458-8bdd-1df8dbceae69",
+		"name": "Twidder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3737341"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Create User budi",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"budi@yahoo.com\",\n    \"userName\": \"budi\",\n    \"password\": \"ArifBudiman123\",\n    \"displayName\": \"Arif Budiman\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/auth/signup",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Ivan Lanin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userName\": \"ivanlanin\",\n    \"displayName\": \"Ivan Lanin\",\n    \"email\": \"ivanlanin@gmail.com\",\n    \"password\": \"IvanLaninKeren123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/users/signup",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 11 May 2021 03:45:10 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "205"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"payload\": {\n        \"ID\": 2,\n        \"Username\": \"ivanlanin\",\n        \"DisplayName\": \"Ivan Lanin\",\n        \"Email\": \"ivanlanin@gmail.com\",\n        \"CreatedAt\": \"2021-05-11T10:45:10.087+07:00\",\n        \"UpdatedAt\": \"2021-05-11T10:45:10.087+07:00\",\n        \"DeletedAt\": null\n    }\n}"
+						},
+						{
+							"name": "Ihza",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userName\": \"Ihzam31415\",\n    \"displayName\": \"Ihza Muhammad\",\n    \"email\": \"Ihzamuhammad1100@gmail.com\",\n    \"password\": \"IhzaIhza123\"\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/users/signup",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 11 May 2021 08:00:55 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "202"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"ID\": 1,\n        \"Username\": \"Ihzam31415\",\n        \"DisplayName\": \"Ihza Muhammad\",\n        \"Email\": \"Ihzamuhammad1100@gmail.com\",\n        \"CreatedAt\": \"2021-05-11T15:00:55.964+07:00\",\n        \"UpdatedAt\": \"2021-05-11T15:00:55.964+07:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create User ivanlanin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"ivanlanin@gmail.com\",\n    \"userName\": \"ivanlanin\",\n    \"password\": \"IvanLaninKeren123\",\n    \"displayName\": \"Ivan Lanin\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/auth/signup",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Ivan Lanin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userName\": \"ivanlanin\",\n    \"displayName\": \"Ivan Lanin\",\n    \"email\": \"ivanlanin@gmail.com\",\n    \"password\": \"IvanLaninKeren123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/users/signup",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 11 May 2021 03:45:10 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "205"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"payload\": {\n        \"ID\": 2,\n        \"Username\": \"ivanlanin\",\n        \"DisplayName\": \"Ivan Lanin\",\n        \"Email\": \"ivanlanin@gmail.com\",\n        \"CreatedAt\": \"2021-05-11T10:45:10.087+07:00\",\n        \"UpdatedAt\": \"2021-05-11T10:45:10.087+07:00\",\n        \"DeletedAt\": null\n    }\n}"
+						},
+						{
+							"name": "Ihza",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userName\": \"Ihzam31415\",\n    \"displayName\": \"Ihza Muhammad\",\n    \"email\": \"Ihzamuhammad1100@gmail.com\",\n    \"password\": \"IhzaIhza123\"\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/users/signup",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 11 May 2021 08:00:55 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "202"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"ID\": 1,\n        \"Username\": \"Ihzam31415\",\n        \"DisplayName\": \"Ihza Muhammad\",\n        \"Email\": \"Ihzamuhammad1100@gmail.com\",\n        \"CreatedAt\": \"2021-05-11T15:00:55.964+07:00\",\n        \"UpdatedAt\": \"2021-05-11T15:00:55.964+07:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login budi",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"budi\",\n    \"password\": \"ArifBudiman123\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/auth/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login Ivan Lanin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"ivanlanin\",\n    \"password\": \"IvanLaninKeren123\"\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/users/login",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjA3MDY4MzksImlkIjoxLCJvcmlnX2lhdCI6MTYyMDcwMzIzOX0.7j7ymB8HyhOMA933Xz2AEWXKDPNB5ovdASUVKm6roLQ; Path=/; Max-Age=3600; HttpOnly"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 11 May 2021 03:20:39 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "204"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"expire\": \"2021-05-11T11:20:39+07:00\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjA3MDY4MzksImlkIjoxLCJvcmlnX2lhdCI6MTYyMDcwMzIzOX0.7j7ymB8HyhOMA933Xz2AEWXKDPNB5ovdASUVKm6roLQ\"\n}"
+						},
+						{
+							"name": "Login Ihza",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"Ihzam31415\",\n    \"password\": \"IhzaKeren99\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/users/login",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjA3MDY4MzksImlkIjoxLCJvcmlnX2lhdCI6MTYyMDcwMzIzOX0.7j7ymB8HyhOMA933Xz2AEWXKDPNB5ovdASUVKm6roLQ; Path=/; Max-Age=3600; HttpOnly"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 11 May 2021 03:20:39 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "204"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"expire\": \"2021-05-11T11:20:39+07:00\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjA3MDY4MzksImlkIjoxLCJvcmlnX2lhdCI6MTYyMDcwMzIzOX0.7j7ymB8HyhOMA933Xz2AEWXKDPNB5ovdASUVKm6roLQ\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login ivanlanin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"ivanlanin\",\n    \"password\": \"IvanLaninKeren123\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login Ihza",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"Ihzam31415\",\n    \"password\": \"IhzaKeren99\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/users/login",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjA3MDY4MzksImlkIjoxLCJvcmlnX2lhdCI6MTYyMDcwMzIzOX0.7j7ymB8HyhOMA933Xz2AEWXKDPNB5ovdASUVKm6roLQ; Path=/; Max-Age=3600; HttpOnly"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 11 May 2021 03:20:39 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "204"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"expire\": \"2021-05-11T11:20:39+07:00\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjA3MDY4MzksImlkIjoxLCJvcmlnX2lhdCI6MTYyMDcwMzIzOX0.7j7ymB8HyhOMA933Xz2AEWXKDPNB5ovdASUVKm6roLQ\"\n}"
+						},
+						{
+							"name": "Login Ivan Lanin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"ivanlanin\",\n    \"password\": \"IvanLaninKeren123\"\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/users/login",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjA3MDY4MzksImlkIjoxLCJvcmlnX2lhdCI6MTYyMDcwMzIzOX0.7j7ymB8HyhOMA933Xz2AEWXKDPNB5ovdASUVKm6roLQ; Path=/; Max-Age=3600; HttpOnly"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 11 May 2021 03:20:39 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "204"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"expire\": \"2021-05-11T11:20:39+07:00\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjA3MDY4MzksImlkIjoxLCJvcmlnX2lhdCI6MTYyMDcwMzIzOX0.7j7ymB8HyhOMA933Xz2AEWXKDPNB5ovdASUVKm6roLQ\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"Ihzam31415\",\n    \"password\": \"IhzaKeren99\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/auth/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Current User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/auth/current-user",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"current-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deactivate Account",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/auth/deactivate-account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"deactivate-account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reactivate Account",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"ivanlanin\",\n    \"password\": \"IvanLaninKeren123\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/auth/reactivate-account",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"reactivate-account"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login Ihza",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"Ihzam31415\",\n    \"password\": \"IhzaKeren99\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/users/login",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjA3MDY4MzksImlkIjoxLCJvcmlnX2lhdCI6MTYyMDcwMzIzOX0.7j7ymB8HyhOMA933Xz2AEWXKDPNB5ovdASUVKm6roLQ; Path=/; Max-Age=3600; HttpOnly"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 11 May 2021 03:20:39 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "204"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"expire\": \"2021-05-11T11:20:39+07:00\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjA3MDY4MzksImlkIjoxLCJvcmlnX2lhdCI6MTYyMDcwMzIzOX0.7j7ymB8HyhOMA933Xz2AEWXKDPNB5ovdASUVKm6roLQ\"\n}"
+						},
+						{
+							"name": "Login Ivan Lanin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"ivanlanin\",\n    \"password\": \"IvanLaninKeren123\"\n}"
+								},
+								"url": {
+									"raw": "localhost:8080/users/login",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjA3MDY4MzksImlkIjoxLCJvcmlnX2lhdCI6MTYyMDcwMzIzOX0.7j7ymB8HyhOMA933Xz2AEWXKDPNB5ovdASUVKm6roLQ; Path=/; Max-Age=3600; HttpOnly"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 11 May 2021 03:20:39 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "204"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"expire\": \"2021-05-11T11:20:39+07:00\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjA3MDY4MzksImlkIjoxLCJvcmlnX2lhdCI6MTYyMDcwMzIzOX0.7j7ymB8HyhOMA933Xz2AEWXKDPNB5ovdASUVKm6roLQ\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users?page=1&page_size=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User's Tweets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/1/tweets",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"1",
+								"tweets"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tweet",
+			"item": [
+				{
+					"name": "Get All Tweets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/tweets",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tweets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Tweets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/tweets?page=1&page_size=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tweets"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "notes",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tweet By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/tweets/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tweets",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tweet By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/tweets/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tweets",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Tweet",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"Halo semua saya Budi\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/tweets",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tweets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Timeline",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/tweets/timeline?page=1&page_size=2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tweets",
+								"timeline"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Follow",
+			"item": [
+				{
+					"name": "Follow",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/users/1/follow",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"1",
+								"follow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unfollow",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/1/unfollow",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"1",
+								"unfollow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User's Followers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/2/followers",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"2",
+								"followers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User's Folowings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/1/followings",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"1",
+								"followings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Like",
+			"item": [
+				{
+					"name": "Like",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/tweets/1/like",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tweets",
+								"1",
+								"like"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unlike",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/tweets/5/unlike",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tweets",
+								"5",
+								"unlike"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Likes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/tweets/5/likes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tweets",
+								"5",
+								"likes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reply",
+			"item": [
+				{
+					"name": "Reply",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"Halo Budi!\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/tweets/1/reply",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tweets",
+								"1",
+								"reply"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Replies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/tweets/3/replies",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tweets",
+								"3",
+								"replies"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notification",
+			"item": [
+				{
+					"name": "Get Notifications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/notifications",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"notifications"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/ping",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "localhost:8080",
+			"type": "string"
+		}
+	]
+}
